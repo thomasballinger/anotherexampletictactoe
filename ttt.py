@@ -1,11 +1,11 @@
 
 
 class Board(object):
-    symbols = {1:'x',
+    signs = {1:'x',
               -1:'0',
               0:'.',}
     def __init__(self):
-        self.rows = [[0] * 3 for _ in range(3)]
+        self.rows = [[0] * 3 for _ in range(3)] 
     @property
     def columns(self):
         return zip(*self.rows)
