@@ -6,6 +6,9 @@ class Board(object):
     @property
     def columns(self):
         return zip(*self.rows)
+    @property
+    def spots(self):
+        return sum(self.rows, [])
 
 
-
+# this is a fancy class
