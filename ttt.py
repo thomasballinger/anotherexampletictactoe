@@ -14,6 +14,8 @@ class Board(object):
         return sum(self.rows, [])
     def __str__(self):
         return '\n'.join(' '.join(Board.sigils[s] for s in row) for row in self.rows)
+    def turn(self):
+        return sum(len(spot for spot in row if spot != 0) for row in self.rows)
 
 if __name__ == '__main__':
     b = Board()
